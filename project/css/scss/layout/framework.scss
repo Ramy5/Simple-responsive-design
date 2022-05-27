@@ -1,0 +1,72 @@
+// Start my frame work 
+.t-center {
+  text-align: center;
+}
+
+.img-fluid {
+  padding: 5px;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.h1 {
+  font-size: 2.5em
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.w-100 {
+  width: 100%
+}
+
+.w-75 {
+  width: 75%
+}
+
+.w-50 {
+  width: 50%
+}
+
+.w-25 {
+  width: 25%
+}
+
+.a-reset {
+  text-decoration: none;
+}
+
+.trans {
+  transition: all .5s ease-in-out;
+}
+
+.t-white {
+  color: #fff;
+}
+
+.padding {
+  padding-top: $mainPadding;
+  padding-bottom: $mainPadding;
+}
+
+.gray-color {
+  color: $mainColor;
+}
+
+.main-h {
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+// End my frame work 

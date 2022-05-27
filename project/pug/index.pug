@@ -1,0 +1,122 @@
+include helpers/mixins.pug
+include helpers/variables.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Responsive web design
+    include helpers/styles.pug
+  body 
+    include layout/header.pug
+    //- start navbar
+    div(class="nav") 
+      div(class="container flex") 
+        h2(class="w-25") Jounior
+        div(class="icon" id="bar")
+          i(class="fa-solid fa-bars bar trans")
+        ul(class="listbar list-reset w-75 flex")
+          each val in ["Our Features", "About Us", "Our Pricing Plans", "What They Say About Us", "Product Information"]
+            li: a(class="a-reset trans" href="#" + count++)= val
+    //- end navbar
+    //- start our feature
+    //- start scroll to top 
+    div(class="scroll trans")
+      i(class="fa-solid fa-angles-up")
+    //- end scroll to top 
+    div(class="feature padding gray-color" id="1")
+      .container
+        +heading("Our Features")
+        div(class="content flex")
+          each value in ["Fast", "Secure", "Cheap"]
+            div(class="feat")
+              h3= value
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eaque excepturi accusantium, dolorum modi mollitia labore odit, quod laudantium fugiat officiis aliquid.
+    //- end our feature
+    //- start about us 
+    div(class="about padding gray-color" id= "2")
+      div(class="container" id="special")
+        +heading("About Us")
+        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus distinctio rem, labore maiores eligendi ipsum nulla recusandae vel id harum iusto reiciendis earum, temporibus, dolorum fugiat nostrum quas dolorem voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ipsam quasi, nisi distinctio repellat commodi magnam provident voluptatibus quo, velit recusandae ipsum facere, reiciendis consequuntur similique asperiores quisquam delectus praesentium? Lorem, ipsum dolor sit amet consectetur adipisicing elit. In suscipit voluptatibus molestiae.
+        .btn 
+          button(class="t-center trans" id="btnAbout") Full Screen
+        div(class="photo flex")
+          -for (let i = 0; i < 8; i++)
+            div(class="image" data-work="Programming")
+              img(class="img-fluid" src="images/about/about-" + coutAbout++ + ".webp")
+    //- end about us 
+    //- start our pricing plans
+    div(class="price padding t-white" id="3")
+      .container 
+        +heading("Our Pricing Plans")
+        div(class="price-content t-center flex")
+          div(class="price-o trans")
+            h3 plus   
+            ul(class="list-reset")
+              li 10$
+              li Disk Space: 50GB
+              li Bandwidth: 100GB
+              li FTP Accounts: 5
+              li Databases: 10
+              li Free Domain
+          div(class="price-o trans")
+            h3 Premium   
+            ul(class="list-reset")
+              li 20$
+              li Disk Space: 80GB
+              li Bandwidth: 200GB
+              li FTP Accounts: 15
+              li Databases: 20
+              li Free Domain
+          div(class="price-o trans")
+            h3 Ultimate
+            ul(class="list-reset")
+              li 30$
+              li Disk Space: 120GB
+              li Bandwidth: 500GB
+              li FTP Accounts: 25
+              li Databases: 250
+              li Free Domain
+    //- end our pricing plans
+    //- start overview 
+    div(class="overview gray-color padding" id="4")
+      .container 
+        +heading("What They Say About Us")
+        div(class="one flex")
+          div(class="image")
+            img(class="img-fluid" src="images/overview/overview.webp" alt="overview")
+          div(class="text")
+            h3 Jounior 
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. At ea neque voluptas doloribus itaque beatae. Libero facere a optio alias itaque quae sint ipsum officia debitis.
+        div(class="contain flex")
+          div(class="two flex")
+            div(class="image")
+              img(class="img-fluid" src="images/overview/overview-2.webp" alt="overview")
+            div(class="text")
+              h3 Ramy 
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. At ea neque voluptas doloribus itaque beatae. Libero vitae.
+          div(class="three flex")
+            div(class="image")
+              img(class="img-fluid" src="images/overview/overview-3.webp" alt="overview")
+            div(class="text")
+              h3 Mohamed 
+              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. At ea neque voluptas doloribus itaque beatae. Libero vitae.
+    //- end overview 
+    //- start product information 
+    div(class="product-info padding" id="5")
+      .container
+        +heading("Product Information")
+        ul(class="list-reset flex t-center list-info")
+          li(class="active trans") About
+          each val in ["History", "Specification", "Technical", "Review"]
+            li(class="trans")= val
+        p(class="active-p") About ipsum, dolor sit amet consectetur adipisicing elit. Velit, neque harum distinctio iusto impedit autem est? Accusamus placeat doloremque ex nulla ducimus iste asperiores? Magni laborum quo incidunt officia eligendi! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum corporis maiores dolorem non neque error itaque reiciendis saepe commodi, eum molestias aliquam exercitationem ab sunt soluta, dicta sit, facilis ratione! Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, earum nostrum harum voluptatem eos itaque veniam pariatur quod?
+        p History ipsum, dolor sit amet consectetur adipisicing elit. Velit, neque harum distinctio iusto impedit autem est? Accusamus placeat doloremque ex nulla ducimus iste asperiores? Magni laborum quo incidunt officia eligendi! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla eveniet soluta natus harum, corporis, explicabo iure quae nemo totam, sit quaerat? Voluptatem dolorem architecto deserunt voluptate odio qui veritatis repellendus! Lorem ipsum, 
+        p Specification ipsum, dolor sit amet consectetur adipisicing elit. Velit, neque harum distinctio iusto impedit autem est? Accusamus placeat doloremque ex nulla ducimus iste asperiores? Magni laborum quo incidunt officia eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis voluptatem asperiores labore explicabo ullam reprehenderit veniam, molestiae provident aut minima veritatis vel cum placeat deleniti perspiciatis distinctio doloremque quos atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, omnis! Autem illo qui consectetur debitis molestias voluptate vitae omnis sint cupiditate corporis repellat delectus maiores in quae.
+        p Technical ipsum, dolor sit amet consectetur adipisicing elit. Velit, neque harum distinctio iusto impedit autem est? Accusamus placeat doloremque ex nulla ducimus iste asperiores? Magni laborum quo incidunt officia eligendi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis modi reprehenderit maxime ea, harum, vero eligendi totam in, dicta voluptate nobis ipsam? A quod laboriosam distinctio dolorum quasi earum non. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam id eligendi provident voluptatum hic animi ea deleniti.
+        p Review ipsum, dolor sit amet consectetur adipisicing elit. Velit, neque harum distinctio iusto impedit autem est? Accusamus placeat doloremque ex nulla ducimus iste asperiores? Magni laborum quo incidunt officia eligendi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque cupiditate minus itaque labore officia quo dignissimos praesentium pariatur minima hic quia ullam fugit rem laborum eos veritatis ratione, incidunt libero.
+    //- end product information
+    include layout/footer.pug
+
+    include helpers/scripts.pug

@@ -1,0 +1,77 @@
+// Start header 
+header {
+  background: url("../images/header.webp") top center no-repeat;
+  background-size: cover;
+  height: 500px;
+  color: #fff;
+
+  .overlay {
+    height: 100%;
+    background-color: #2196f3bd;
+
+    .container {
+      height: 100%;
+
+      .plan {
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        .content {
+          margin: auto;
+          width: 100%;
+
+          h1 {
+            @media #{$maxMobail} {
+              font-size: 40px;
+            }
+
+            margin: 0;
+            margin-bottom: 15px;
+            font-size: 60px;
+          }
+
+          .para {
+            @media #{$maxMobail} {
+              display: block !important;
+            }
+
+            p {
+              @media #{$maxMobail} {
+                width: 100%;
+              }
+
+              width: 48%;
+              padding: 25px;
+              border: 4px solid #fff;
+              font-size: 25px;
+
+              &:hover {
+                background-color: #3f51b5;
+                cursor: pointer;
+              }
+            }
+          }
+
+          button {
+            width: 100%;
+            padding: 25px;
+            border: 4px solid #fff;
+            font-size: 25px;
+            background-color: transparent;
+            color: #fff;
+
+            &:hover {
+              background-color: #3f51b5;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// End header 
